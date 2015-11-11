@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu research</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style>
+  body {
+    font-family: sans-serif;
+  }
+  .menu-button {
+    background-color: #333;
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+
+  }
+
+  .menu-button-status, .sub-menu-button-status {
+    display: none;
+  }
+
+  .sub-menu-button-status:checked ~ .submenu, .menu-button-status:checked ~ .menu {
+    display: block;
+  }
+  .menu {
+    background-color: #333;
+    color: white;
+    display: none;
+    width: 100%;
+  }
+
+  .menu .item {
+    display: block;
+    padding: 10px;
+    line-height: 1;
+  }
+
+  .submenu {
+    background-color: #e1e1e1;
+    width: 100%;
+    display: none;
+    /*overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;*/
+  }
+  .submenu .item {
+    display: block;
+    padding: 10px;
+    line-height: 1;
+    color: #333;
+  }
+
+  @media screen and (min-width: 800px) {
+    .menu-button {
+      display: none;
+    }
+    .menu {
+      display: block;
+      
+    }
+
+    .menu .item {
+      display: inline-block;
+    }
+  }
+
+</style>
+<label class="menu-button" for="menu-button-status">+</label>
+<input id="menu-button-status" class="menu-button-status" type="checkbox">
+
+<nav class="menu">
+  <div class="item">menu1</div>
+  <div class="item">menu2</div>
+  
+  <label class="item sub-menu-button" for="sub-menu-button-status">news</label>
+  <input id="sub-menu-button-status" class="sub-menu-button-status" type="checkbox">
+  <nav class="submenu">
+    <div class="item">submenu1</div>
+    <div class="item">submenu2</div>
+    <div class="item">submenu3</div>
+    <div class="item">submenu4</div>
+    <div class="item">submenu5</div>
+    <div class="item">submenu6</div>
+  </nav>
+
+
+  
+</nav>
+
+</body>
+</html>
